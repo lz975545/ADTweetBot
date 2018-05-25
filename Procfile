@@ -1,2 +1,1 @@
-web: python tweetbot.py
-ps:scale worker=1
+bot: python tweetbot.py
