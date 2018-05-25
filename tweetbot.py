@@ -10,16 +10,16 @@ my_file = open('quotes.txt')
 file_lines = my_file.readlines()
 my_file.close()
 
-# Tweet a line every 10 minutes
+# Tweet a line every 30 minutes
 def tweet():
     for line in file_lines:
         try:
              print(line)
              if line != '\n':
                  api.update_status(line)
-                 sleep(10*60)
+                 sleep(30*60)
         except tweepy.TweepError as e:
-            print(e.reason)a
+            print(e.reason)
             sleep(2)
 
 tweet()
